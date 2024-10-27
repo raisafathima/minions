@@ -1,0 +1,77 @@
+<body style="background-color: navajowhite;">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info</title>
+    <style>
+        /* Center-align all content inside the body */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Add spacing for better readability */
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        /* Add some margin around each label and input for spacing */
+        label {
+            margin: 5px 0;
+        }
+
+        input {
+            margin: 5px 0;
+            font-size: 18px; /* Increased font size for input fields */
+            padding: 5px; /* Added padding for better appearance */
+        }
+
+        /* Center-align the button */
+        button {
+            margin-top: 10px;
+            font-size: 16px; /* Increased font size for button */
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Student Information</h1>
+
+    <!-- Input fields for name and age -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter name"><br><br>
+
+    <label for="age"> Age:</label>
+    <input type="number" id="age" placeholder="Enter age"><br><br>
+
+    <!-- Button to submit and display information -->
+    <form action="page4.html"
+    method="GET">
+    <button type="submit">Submit</button>
+    </form>
+
+    <!-- Area to display the student's info -->
+    <h2>Student Information</h2>
+    <p id="studentInfo"></p>
+
+    <script>
+        // Function to display student info
+        function displayInfo() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+           
+
+            // Check if both fields are filled
+            if (name, age && gender) {
+                document.getElementById("studentInfo").innerText = Name: ${name}, Age: ${age}; // Fixed string interpolation
+            } else {
+                document.getElementById("studentInfo").innerText = "Please enter both name and age.";
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+#game {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .word, .definition {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+  }
+  .word.selected, .definition.selected {
+    background-color: lightblue;
+  }

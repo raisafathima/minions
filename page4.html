@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: khaki;
+            color: #663636;
+            text-align: center;
+            padding: 60px;
+            font-size: larger;
+            font-style: inherit;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Options from the given below</h1>
+    <label for="gameSelect">Skills to enroll:</label>
+    <select id="gameSelect">
+        <option value="none">--Select a skill you wanna improve--</option>
+        <option value="game1">Logical thinking</option>
+        <option value="game2">Algorithmic learning</option>
+        <option value="game3">Vocabulary Improving</option>
+        <option value="game4">Questionire</option>
+
+    </select>
+    <button id="selectButton">Select Game</button>
+
+    <div id="selectedGame" style="margin-top: 20px;"></div>
+
+    <script>
+        document.getElementById('selectButton').addEventListener('click', () => {
+            const selectedGame = document.getElementById('gameSelect').value;
+            const displayArea = document.getElementById('selectedGame');
+
+            if (selectedGame === 'none') {
+                displayArea.innerText = 'Please select a game.';
+            } else if (selectedGame === 'game1' || selectedGame === 'logical thinking') {
+                window.open('logical.html', '_blank'); // Open logiocal thinking game for both selections
+            }    else if (selectedGame === 'game2' || selectedGame === 'Arithmetic learning') {
+                window.open('arithmetic.html', '_blank'); // Open Arithmetic learning game for both selections 
+            }    else if (selectedGame === 'game3' || selectedGame === 'Vocabulary improving') {
+                window.open('vocabulary.html', '_blank'); // Open Vocabulary improving game for both selections
+            }    else if (selectedGame === 'game4' || selectedGame === 'Questionire improving') {
+                window.open('quiss.html', '_blank'); // Open Vocabulary improving game for both selections
+
+            } else {
+                displayArea.innerText = `You selected: ${selectedGame.replace(/game/g, 'Game ')}`;
+            }
+        });
+    </script>
+</body>
+</html>
